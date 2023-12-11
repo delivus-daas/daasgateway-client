@@ -34,7 +34,7 @@ class DaaSGatewayAPIService:
             resp.raise_for_status()
         except httpx.HTTPStatusError as exc:
             raise DaaSGatewayClientError(
-                f"Failed to create orders.",
+                "Failed to create orders.",
                 status_code=exc.response.status_code,
             ) from exc
         return resp.json()
@@ -46,7 +46,7 @@ class DaaSGatewayAPIService:
             resp.raise_for_status()
         except httpx.HTTPStatusError as exc:
             raise DaaSGatewayClientError(
-                f"Failed to create shipping items",
+                "Failed to create shipping items",
                 status_code=exc.response.status_code,
             ) from exc
         return resp.json()
@@ -60,7 +60,7 @@ class DaaSGatewayAPIService:
             resp.raise_for_status()
         except httpx.HTTPStatusError as exc:
             raise DaaSGatewayClientError(
-                f"Failed to set ready for pickup",
+                "Failed to set ready for pickup",
                 status_code=exc.response.status_code,
             ) from exc
         return resp.json()
@@ -72,7 +72,7 @@ class DaaSGatewayAPIService:
             resp.raise_for_status()
         except httpx.HTTPStatusError as exc:
             raise DaaSGatewayClientError(
-                f"Failed to cancel shipping",
+                "Failed to cancel shipping",
                 status_code=exc.response.status_code,
             ) from exc
         return resp.json()
@@ -84,7 +84,7 @@ class DaaSGatewayAPIService:
             resp.raise_for_status()
         except httpx.HTTPStatusError as exc:
             raise DaaSGatewayClientError(
-                f"Failed to return shipping",
+                "Failed to return shipping",
                 status_code=exc.response.status_code,
             ) from exc
         return resp.json()
@@ -98,7 +98,7 @@ class DaaSGatewayAPIService:
             resp.raise_for_status()
         except httpx.HTTPStatusError as exc:
             raise DaaSGatewayClientError(
-                f"Failed to associate shippings",
+                "Failed to associate shippings",
                 status_code=exc.response.status_code,
             ) from exc
         return resp.json()
@@ -110,7 +110,7 @@ class DaaSGatewayAPIService:
             resp.raise_for_status()
         except httpx.HTTPStatusError as exc:
             raise DaaSGatewayClientError(
-                f"Failed to create pickup",
+                "Failed to create pickup",
                 status_code=exc.response.status_code,
             ) from exc
         return resp.json()
@@ -124,7 +124,7 @@ class DaaSGatewayAPIService:
             resp.raise_for_status()
         except httpx.HTTPStatusError as exc:
             raise DaaSGatewayClientError(
-                f"Failed to create pickup shipping items",
+                "Failed to create pickup shipping items",
                 status_code=exc.response.status_code,
             ) from exc
         return resp.json()
@@ -136,7 +136,7 @@ class DaaSGatewayAPIService:
             resp.raise_for_status()
         except httpx.HTTPStatusError as exc:
             raise DaaSGatewayClientError(
-                f"Failed to get job group status.",
+                "Failed to get job group status.",
                 status_code=exc.response.status_code,
             ) from exc
         return resp.json()
@@ -152,7 +152,7 @@ class DaaSGatewayAPIService:
             resp.raise_for_status()
         except httpx.HTTPStatusError as exc:
             raise DaaSGatewayClientError(
-                f"Failed to get job payload.",
+                "Failed to get job payload.",
                 status_code=exc.response.status_code,
             ) from exc
         return resp.json()
@@ -166,7 +166,7 @@ class DaaSGatewayAPIService:
             resp.raise_for_status()
         except httpx.HTTPStatusError as exc:
             raise DaaSGatewayClientError(
-                f"Failed to get job response.",
+                "Failed to get job response.",
                 status_code=exc.response.status_code,
             ) from exc
         return resp.json()
