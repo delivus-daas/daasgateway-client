@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "daasgateway-client"
+version = "0.0.1"
+description = "Python client for DaaS Gateway by Delivus"
+authors = ["hyunilmmt <hyunil@delivus.co.kr>"]
+readme = "README.md"
+packages = [{include = "daasgateway_client"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+ujson = "^5.9.0"
+httpx = "^0.25.2"
+pydantic = "^2.5.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+pytest-black = "^0.3.12"
+pytest-flake8 = "^1.1.1"
+pytest-cov = "^4.1.0"
+black = "^23.11.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
