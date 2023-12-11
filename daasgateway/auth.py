@@ -96,7 +96,10 @@ class DaaSGatewayAuth(httpx.Auth):
     async def async_auth_flow(self, request):
         if self._credentials.id_token is None:
             await self._login()
-        elif self._credentials.expiry < time.time():
+        elif (
+            self._credentials.expiry is not None
+            and self._credentials.expiry < time.time()
+        ):
             await self._refresh()
         request.headers[
             "Authorization"
