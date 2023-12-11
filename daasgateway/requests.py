@@ -45,7 +45,7 @@ class CreateOrderRequest(BaseModel):
     receiver_address1: str = Field(max_length=64, strip_whitespace=True)
     receiver_address2: str = Field(default="", max_length=128, strip_whitespace=True)
     receiver_postcode: str = Field(min_length=5, max_length=5, strip_whitespace=True)
-    order_items: List[OrderItem] = Field(default_factory=list, min_items=1)
+    order_items: List[OrderItem] = Field(default_factory=list, min_length=1)
 
 
 class CreateShippingItemRequest(BaseModel):
