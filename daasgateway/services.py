@@ -130,7 +130,7 @@ class DaaSGatewayAPIService:
         return resp.json()
 
     @staticmethod
-    async def get_job_group_status(job_group_uuid: str) -> Dict[str, Any]:
+    async def get_job_group_status(job_group_uuid: UUID) -> Dict[str, Any]:
         try:
             resp = await _client.get(f"/api/v1/jobs/groups/{job_group_uuid}/")
             resp.raise_for_status()
