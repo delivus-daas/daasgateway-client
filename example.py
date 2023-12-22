@@ -60,6 +60,11 @@ async def main(orders: list):
 
 
 if __name__ == "__main__":
+    # NOTE:
+    # required environment variables
+    # - DAAS_GATEWAY_USERNAME
+    # - DAAS_GATEWAY_PASSWORD
+    # - DAAS_GATEWAY_CLIENT_ID
     orders_data = [
         {
             # order data here
